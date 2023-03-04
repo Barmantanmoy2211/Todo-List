@@ -7,12 +7,13 @@ require('dotenv').config();
 
 //middlewarw
 
+app.use(express.static('./public'))
 app.use(express.json())
 
 //routes
-app.get('/hello',(req,res)=>{
-    res.send("Task Maneger")
-})
+// app.get('/hello',(req,res)=>{
+//     res.send("Task Maneger")
+// })
 
 app.use('/api/v1/tasks',tasks)
 
